@@ -1,4 +1,48 @@
 {
   "name": "oboe-promise",
-  "version": "0.0.0"
+  "version": "1.0.0",
+  "description": "Oboe.js with promises",
+  "main": "index.es5.js",
+  "scripts": {
+    "coverage": "babel-node node_modules/.bin/isparta cover _mocha",
+    "precoveralls": "npm run coverage",
+    "coveralls": "coveralls < coverage/lcov.info",
+    "lint": "eslint .",
+    "test": "mocha -r babel/register",
+    "tdd": "npm test -- --watch",
+    "transpile": "babel index.js --out-file index.es5.js",
+    "prepublish": "npm run transpile",
+    "clean": "trash index.es5.js",
+    "prepush": "npm-run-all lint test",
+    "push": "git push --follow-tags",
+    "postpublish": "npm-run-all clean push"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kinday/oboe-promise.git"
+  },
+  "author": "Leonard Kinday <leonard@kinday.ru> (http://leonard.kinday.ru)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kinday/oboe-promise/issues"
+  },
+  "homepage": "https://github.com/kinday/oboe-promise#readme",
+  "dependencies": {
+    "oboe": "^2.1.2"
+  },
+  "devDependencies": {
+    "assert": "*",
+    "babel": "*",
+    "babel-eslint": "^4.1.3",
+    "coveralls": "*",
+    "eslint": "^1.6.0",
+    "eslint-config-airbnb": "^0.1.0",
+    "find-port": "^1.0.1",
+    "husky": "^0.10.1",
+    "isparta": "*",
+    "mocha": "*",
+    "node-static": "^0.7.7",
+    "npm-run-all": "*",
+    "trash": "*"
+  }
 }
