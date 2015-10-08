@@ -1,6 +1,6 @@
 {
   "name": "oboe-promise",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Oboe.js with promises",
   "main": "index.es5.js",
   "scripts": {
