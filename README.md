@@ -28,7 +28,7 @@ oboe('http://example.com/data.json')
 
 ## Thanks
 
-Scaffolded with the help of awesome [`tiny-es6-nm`][tiny-es6-nm] generator.
+Scaffolded with the help of awesome [`tiny-es-nm`][tiny-es-nm] generator.
 
 ## License
 
@@ -47,3 +47,4 @@ MIT © [Leonard Kinday](http://leonard.kinday.ru)
 [depstat-image]: https://david-dm.org/kinday/oboe-promise.svg?style=flat-square
 
 [oboe-api]: http://oboejs.com/api
+[tiny-es-nm]: http://npmjs.com/package/generator-tiny-es-nm
